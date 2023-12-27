@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.eventos {
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+    &__grid {
+        margin-top: 2rem;
+        @include m.grid(1, 4rem);
+
+        @include m.tablet {
+            grid-template-columns: repeat(3, 65rem);
+            overflow-y: hidden;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+        @include m.desktopXL {
+            margin-top: 3rem;
+            overflow-x: unset;
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.evento {
+    max-width: 45rem;
+    margin-inline: auto;
+    border: 1px solid v.$grisClaro;
+
+    @include m.tablet {
+        max-width: 65rem;
+        margin-inline: unset;
+        scroll-snap-align: center;
+    }
+    &__imagen {
+        width: 100%;
+        height: auto;
+    }
+    &__contenido {
+        padding: 2rem;
+    }
+    &__fecha {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    &__nombre {
+        color: v.$gris;
+        margin: 1rem 0;
+    }
+    &__autor {
+        display: flex;
+        column-gap: 2rem;
+        align-items: center;
+        margin-top: 2rem;
+
+        &-imagen {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+    &__perfil {
+        width: 10rem;
+        height: auto;
+    }
+    &__organizado-texto,
+    &__organizado-nombre {
+        margin: 0.5rem 0;
+    }
+    &__organizado-texto {
+        font-weight: 700;
+    }
+
+
+}

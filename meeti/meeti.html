@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeti</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+
+    <header class="header contenedor">
+        <div class="header__logo">
+            <a href="index.html">
+                <picture>
+                    <source srcset="build/img/logo.avif" type="image/avif"/>
+                    <source srcset="build/img/logo.webp" type="image/webp"/>
+                    <img class="header__imagen-logo" loading="lazy" decoding="async" src="build/img/logo.png" lazyalt="imagen" width="500" height="300" alt="logo meeti" />
+                </picture>
+            </a>
+        </div>
+
+        <nav class="navegacion">
+            <a class="navegacion__enlace navegacion__enlace--crear" href="#">Crear Grupo</a>
+            <a class="navegacion__enlace" href="#">Iniciar Sesión</a>
+            <a class="navegacion__enlace" href="#">Registrarse</a>
+        </nav>
+    </header>
+
+    <main class="meeti">
+        <h1 class="meeti__heading">Headless Wordpress con Next.js</h1>
+
+        <div class="meeti__grid contenedor">
+            <div class="meeti__contenido">
+                <picture>
+                    <source srcset="build/img/meeti.avif" type="image/avif"/>
+                    <source srcset="build/img/meeti.webp" type="image/webp"/>
+                    <img class="meeti__imagen" loading="lazy" decoding="async" src="build/img/meeti.jpg" lazyalt="imagen" width="500" height="300" alt="imagen meeti" />
+                </picture>
+
+                <p class="meeti__texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, cumque? Natus, rerum officia. Exercitationem quis recusandae, possimus earum iusto, nemo magnam neque sit porro atque amet delectus ipsa id quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos tenetur hic deleniti pariatur a nulla quo, reiciendis beatae alias autem quia assumenda asperiores neque ad possimus cum explicabo minus commodi?</p>
+                <p class="meeti__texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, cumque? Natus, rerum officia. Exercitationem quis recusandae, possimus earum iusto, nemo magnam neque sit porro atque amet delectus ipsa id quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos tenetur hic deleniti pariatur a nulla quo, reiciendis beatae alias autem quia assumenda asperiores neque ad possimus cum explicabo minus commodi?</p>
+            </div>
+
+            <aside class="aside">
+                <picture>
+                    <source srcset="build/img/mapa.avif" type="image/avif"/>
+                    <source srcset="build/img/mapa.webp" type="image/webp"/>
+                    <img class="aside__imagen" loading="lazy" decoding="async" src="build/img/mapa.jpg" lazyalt="imagen" width="500" height="300" alt="imagen mapa" />
+                </picture>
+
+                <div class="aside__contenido">
+                    <h3 class="aside__nombre">Información Meeti</h3>
+                    <p class="aside__fecha"><span>Fecha:</span> 30 de Diciembre de 2022</p>
+                    <p class="aside__horario"><span>Hora:</span> 20:30</p>
+                    <p class="aside__ubicacion"><span>Ubicación:</span> Av. Vallarta 3033</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="navegacion contenedor">
+            <a class="navegacion__enlace navegacion__enlace--crear" href="#">Crear Grupo</a>
+            <a class="navegacion__enlace" href="#">Iniciar Sesión</a>
+            <a class="navegacion__enlace" href="#">Registrarse</a>
+        </nav>
+
+        <p class="footer__copyright">Todos los derechos reservados. Meeti</p>
+    </footer>
+
+    <script src="build/js/imagenes.js"></script>
+</body>
+</html>

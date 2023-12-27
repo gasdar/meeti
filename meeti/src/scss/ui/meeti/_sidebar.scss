@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.aside {
+    max-width: 40rem;
+    margin-inline: auto;
+
+    @include m.tablet {
+        grid-column: 4 / 7;
+    }
+    &__imagen {
+        width: 100%;
+        height: auto;
+    }
+    &__contenido {
+        background-color: v.$secundario;
+        padding: 2rem;
+        color: v.$blanco;
+        text-align: center;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        
+    }
+    &__fecha,
+    &__horario,
+    &__ubicacion {
+        @include m.parrafoBlanco;
+    }
+}

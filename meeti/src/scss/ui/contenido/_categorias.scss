@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.categorias {
+    background-color: v.$grisClaro;
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+    &__grid {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(12, 30rem);
+        column-gap: 4rem;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+        @include m.telefono {
+            grid-template-columns: repeat(12, 40rem);
+        }
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+            overflow-x: unset;
+        }
+        @include m.desktopXL {
+            margin-top: 3rem;
+            @include m.grid(4, 2rem);
+        }
+    }
+}
+
+.categoria {
+    max-width: 30rem;
+    scroll-snap-align: center;
+    
+    @include m.telefono {
+        max-width: 40rem;
+    }
+    @include m.tablet {
+        margin-inline: auto;
+        max-width: 55rem;
+    }
+    &__imagen {
+        width: 100%;
+        height: auto;
+    }
+    &__nombre {
+        background-color: v.$gris;
+        color: v.$blanco;
+        margin: 0;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+    }
+}

@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.busqueda {
+    background-color: v.$grisClaro;
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+}
+
+.formulario {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        @include m.grid(9, 3rem);
+    }
+    @include m.desktop {
+        @include m.grid(4, 3rem);
+    }
+    @include m.desktopXL {
+        margin-top: 3rem;
+    }
+    &__campo {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 0.2rem solid lighten(v.$gris, 50%);
+
+        @include m.tablet {
+            margin-bottom: 0;
+            
+            &:nth-child(1) {
+                grid-column: 1 / 4;
+            }
+            &:nth-child(2) {
+                grid-column: 4 / 7;
+            }
+            &:nth-child(3) {
+                grid-column: 7 / 10;
+            }
+        }
+
+        @include m.desktop {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                grid-column: unset;
+            }
+        }
+    }
+    &__submit {
+        @include m.boton(v.$primario, v.$blanco);
+        margin-top: 0;
+        padding-block: 1rem;
+        
+        @include m.tablet {
+            grid-column: 3 / 8;
+        }
+        @include m.desktop {
+            grid-column: unset;
+            padding-block: 1.5rem;
+        }
+    }
+}
